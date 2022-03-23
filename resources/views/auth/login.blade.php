@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Signin Template · Bootstrap v5.1</title>
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <title>@yield('title', config('app.name', 'POS Majoo'))</title>
+        <meta name="description" content="@yield('description', config('app.name', 'POS Majoo'))">
         <!-- Bootstrap core CSS -->
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
         <style>
@@ -24,7 +25,7 @@
         <main>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-4 rounded p-5" id="login">
+                    <div class="col-lg-4 rounded p-5" id="login">
                         <div class="text-center">
                             <img src="{{asset('images/majoo.png')}}" class="img-fluid" alt="...">
                         </div>
