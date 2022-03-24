@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\ProductController;
+use App\Http\Controllers\Mainpage\HomepageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomepageController::class, 'index'])->name('homepage');
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->middleware('guest')->name('login');
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->middleware('guest');

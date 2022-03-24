@@ -17,12 +17,16 @@ class ProductSeeder extends Seeder
     {
         $faker = Factory::create();
 
-        for ($i=0; $i < 36; $i++) { 
+        $products = [
+            'names' => ['Majoo Pro', 'Majoo Advance', 'Majoo Livestyle', 'Majoo Desktop'],
+            'images' => ['standard-repo.png', 'paket-advance.png', 'paket-lifestyle.png', 'paket-desktop.png'],
+        ];
+        foreach ($products['names'] as $key => $name) {
             Product::create([
-                'name' => $faker->sentence(3),
-                'description' => $faker->sentence(),
-                'price' => rand(100000, 400000),
-                'image' => $faker->imageUrl(),
+                'name' => $name,
+                'description' => $faker->sentence($key+30+($key*3)),
+                'price' => 2000000 + ($key * 300000),
+                'image' => url('images/'.$products['images'][$key]),
                 'category_id' => rand(1,4),
             ]);
         }
