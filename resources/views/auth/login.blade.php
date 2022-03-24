@@ -19,6 +19,22 @@
                 background-color: #ffffff;
                 margin-top: 100px;
             }
+
+            /*
+            * Button
+            */
+
+            .btn-brand {
+                color: #fff;
+                background-color: #00b7b5;
+                border-color: #00b7b5;
+            }
+
+            .btn-brand:hover {
+                color: #fff;
+                background-color: #009693;
+                border-color: #009693;
+            }
         </style>
     </head>
     <body>
@@ -46,7 +62,7 @@
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
-                            <button type="submit" class="btn btn-primary">Login</button>
+                            <button type="submit" class="btn btn-brand form-control mt-2">Login</button>
                         </form>
                     </div>
                 </div>

@@ -128,6 +128,16 @@ body {
     border-color: #009693;
 }
 
+.btn-outline-brand {
+    color: #00b7b5;
+    border-color: #00b7b5;
+}
+.btn-outline-brand:hover {
+    color: #fff;
+    background-color: #00b7b5;
+    border-color: #00b7b5;
+}
+
 /*
 *  Table
 */
