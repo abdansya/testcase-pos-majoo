@@ -89,8 +89,7 @@ class ProductController extends Controller
             Alert::success('Sukses', 'Data telah tersimpan!');
             return redirect(route($this->routeIndex));
         } catch (\Exception $exception) {
-            // Alert::error('Error', 'Mohon maaf ada keaslahan sistem, silakan coba beberapa saat lagi.');
-            Alert::error('Error', $exception->getMessage());
+            Alert::error('Error', 'Mohon maaf ada keaslahan sistem, silakan coba beberapa saat lagi.');
             return redirect()->back();
         }
     }
