@@ -50,7 +50,7 @@
 
         <main class="p-4">
             <h2>Produk</h2>
-            <div class="row row-cols-1 row-cols-md-4 g-4 mt-2">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-2">
                 @foreach ($products as $product)
                     <div class="col">
                         <div class="card h-100">
