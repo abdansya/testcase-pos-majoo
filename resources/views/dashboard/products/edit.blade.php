@@ -56,7 +56,10 @@
                         </div>
                         <div class="mb-3">
                             <label for="inputPrice" class="form-label">Harga</label>
-                            <input type="number" class="form-control @error('price') {{'is-invalid'}} @enderror" id="inputPrice" aria-describedby="price" name="price" value="{{old('price', $detail->price)}}" placeholder="Harga Produk">
+                            <div class="input-group">
+                                <span class="input-group-text" id="priceAddon">Rp.</span>
+                                <input type="number" class="form-control @error('price') {{'is-invalid'}} @enderror" id="inputPrice" aria-describedby="price" name="price" value="{{old('price', $detail->price)}}" placeholder="Harga Produk" aria-describedby="priceAddon">
+                            </div>
                             @error('price')
                                 <div class="form-text text-danger">*{{$message}}</div>
                             @enderror

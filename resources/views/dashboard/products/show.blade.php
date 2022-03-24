@@ -26,7 +26,7 @@
                     </div>
                     <div class="row pb-2">
                         <div class="col-5">Harga</div>
-                        <div class="col-7">: Rp. {{number_format($detail->price)}}</div>
+                        <div class="col-7">: Rp. {{number_format($detail->price,0,',','.')}}</div>
                     </div>
                     <div class="row pb-2">
                         <div class="col-5">Kategori</div>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="row pb-2">
                         <div class="col-5">Deskripsi</div>
-                        <div class="col-7">: {!!$detail->description !!}</div>
+                        <div class="col-7">{!!$detail->description !!}</div>
                     </div>
                     <div class="row">
                         <div class="col-5">Waktu Dibuat</div>
