@@ -67,6 +67,7 @@ class ProductController extends Controller
                     'price.integer' => 'Harga produk harus berupa angka.',
                     'price.min' => 'Minimal harga produk adalah Rp.1000',
                     'price.max' => 'Maksimal harga produk adalah 2 miliar rupiah',
+                    'image.required' => 'Mohon lengkapi foto produk.',
                     'category_id.required' => 'Mohon lengkapi kategori produk.',
                 ]
             );
@@ -205,7 +206,7 @@ class ProductController extends Controller
                     'image' => 'required|image|max:1024',
                 ],
                 [
-                    'image.required' => 'Mohon lengkapi harga produk.',
+                    'image.required' => 'Mohon lengkapi foto produk.',
                     'image.image' => 'Foto produk harus berupa gambar.',
                     'image.max' => 'Ukuran foto produk maksimal 1 Mb.',
                 ]
